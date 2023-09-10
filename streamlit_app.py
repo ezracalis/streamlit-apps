@@ -11,7 +11,8 @@ st.title("Sentiment Analysis (Bahasa Melayu)")
 user_input_container = st.empty()
 
 # Get user inputs
-sentence = user_input_container.text_area(label='Input a sentence in Malay to determine its sentiment. 🇸🇬🇲🇾🇧🇳🇮🇩')
+sentence = user_input_container.text_area(label='Input a sentence in Malay to determine its sentiment.')
+sentence = user_input_container.text_area(label='Isi ayat dalam Bahasa Melayu untuk menentukan sentimennya. 🇸🇬🇲🇾🇧🇳🇮🇩')
 
 # Display the inputs
 user_input = {"sentences": [sentence]} 
