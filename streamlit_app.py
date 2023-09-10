@@ -33,7 +33,7 @@ if st.button("Submit"):  # only display model predictions on UI if user clicks "
     # Create a dictionary to pass to st.bar_chart and round the values
     chart_data = {
         "Sentiment": ["Negative", "Not Negative"],
-        "Probability": [(probability), (1 - probability)]
+        "Probability": [probability, 1 - probability]
     }
 
     # Create a bar chart
