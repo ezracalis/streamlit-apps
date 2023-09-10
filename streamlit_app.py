@@ -27,11 +27,14 @@ if st.button("Submit"):  # only display model predictions on UI if user clicks "
     predictions = response.json()  # return dictionary with key 'predictions' & values are a list of predictions
     
     st.write(f"Prediction: {predictions}")  # prediction values were stored in 'predictions' key of dict: predictions. [0] is to give prediction output 0/1 in a "unlisted" format since we're only sending user inputs for 1 row of X at a time
- # Extract the sentiment probability from the dictionary
+   # Extract the sentiment probability from the dictionary
     probability = predictions["probability"]
 
-    # Create a dictionary to pass to st.bar_chart
-    chart_data = {"Sentiment": ["Negative", "Not Negative"], "Probability": [round(probability, 2), round(1 - probability, 2)]}
+    # Create a dictionary to pass to st.bar_chart and round the values
+    chart_data = {
+        "Sentiment": ["Negative", "Not Negative"],
+        "Probability": [(probability), (1 - probability)]
+    }
 
     # Create a bar chart
     st.bar_chart(chart_data, x="Sentiment", y="Probability", use_container_width=True)
