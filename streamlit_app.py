@@ -36,3 +36,17 @@ if button2:
 if button3:
     user_input_container.text_area("Input a sentence in Malay to determine its sentiment.", content3)
     sentence = content3  # Update the 'sentence' variable
+
+
+# Code to post the user inputs to the API and get the predictions
+# Paste the URL to your GCP Cloud Run API here!
+api_url = 'https://malay-sentiment-nqaybcgjca-as.a.run.app' # replace with own Google Cloud Run API
+api_route = '/predict_sentiment'
+
+# Add a submit button
+if st.button("Submit"): # only display model predictions on UI if user clicks "Submit" button
+    response = requests.post(f'{api_url}{api_route}', json=json.dumps(user_input)) # json.dumps() converts dict to JSON
+    predictions = response.json() # return dictionary with key 'predictions' & values are a list of predictions
+    
+    st.write(f"Prediction: {predictions['predictions'][0]}") # prediction values were stored in 'predictions' key of dict: predictions. [0] is to give prediction output 0/1 in a "unlisted" format since we're only sending user inputs for 1 row of X at a time
+# See the 3: docker notebook to see why. basically it's to pull the value from the dictionary: {'predictions': [0, 1, 1, 1, 0]}
