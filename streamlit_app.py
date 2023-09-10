@@ -14,24 +14,6 @@ user_input_container = st.empty()
 #sentence = user_input_container.text_area(label='Input a sentence in Malay to determine its sentiment.')
 sentence = user_input_container.text_area(label='Isi ayat dalam Bahasa Melayu untuk menentukan sentimennya. 🇸🇬🇲🇾🇧🇳🇮🇩')
 
-# Create buttons with words
-button1 = st.button("Tahniah!")
-button2 = st.button("Ape kau nyer problem eh")
-button3 = st.button("Eh musibot, lu rilek sua")
-
-# Define content for each button
-content1 = "Tahniah!"
-content2 = "Ape kau nyer problem eh"
-content3 = "Eh musibot, lu rilek sua"
-
-# Update the original text area based on the button clicked
-if button1:
-    user_input_container.text_area("Input a sentence in Malay to determine its sentiment.", content1)
-if button2:
-    user_input_container.text_area("Input a sentence in Malay to determine its sentiment.", content2)
-if button3:
-    user_input_container.text_area("Input a sentence in Malay to determine its sentiment.", content3)
-
 # Display the inputs
 user_input = {"sentences": [sentence]} 
 st.write("User input:")
@@ -58,4 +40,4 @@ if st.button("Submit"):  # only display model predictions on UI if user clicks "
     }
 
     # Create a bar chart
-    st.bar_chart(chart_data, x="Sentiment", y="Probability", use_container_width=True)
+    st.bar_chart(chart_data, x="Sentiment", y="Probability", use_container_width=False)
