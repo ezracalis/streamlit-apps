@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import json
+import pandas as pd
 
 # Title of the webpage
 st.title("Sentiment Analysis (Bahasa Melayu 🇸🇬🇲🇾🇧🇳🇮🇩)")
