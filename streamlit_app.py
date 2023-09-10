@@ -3,13 +3,13 @@ import requests
 import json
 
 # Title of the webpage
-st.title("Sentiment Analysis (Bahasa Melayu 🇸🇬🇲🇾🇧🇳🇮🇩)")
+st.title("Sentiment Analysis (Bahasa Melayu)")
 
 # Create an empty container to hold the user input
 user_input_container = st.empty()
 
 # Get user inputs
-sentence = user_input_container.text_area(label='Input a sentence in Malay to determine its sentiment.')
+sentence = user_input_container.text_area(label='Input a sentence in Malay to determine its sentiment. 🇸🇬🇲🇾🇧🇳🇮🇩')
 
 # Display the inputs
 user_input = {"sentences": [sentence]} 
