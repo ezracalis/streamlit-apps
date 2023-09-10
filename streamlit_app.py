@@ -2,6 +2,8 @@ import streamlit as st
 import requests
 import json
 
+st.set_page_config(page_title="Sentiment Analysis (Bahasa Melayu)")
+
 # Title of the webpage
 st.title("Sentiment Analysis (Bahasa Melayu)")
 
