@@ -40,4 +40,4 @@ if st.button("Submit"):  # only display model predictions on UI if user clicks "
     }
 
     # Create a bar chart
-    st.bar_chart(chart_data, x="Sentiment", y="Probability", use_container_width=True)
+    st.bar_chart(chart_data, x="Sentiment", y="Probability", use_container_width=True, orientation = 'h')
