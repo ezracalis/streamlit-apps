@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-st.set_page_config(page_title="Alat Analisis Sentiment Media Sosial")
+st.set_page_config(page_title="Alat Analisis Sentiment Media Sosial 📊👥💬")
 
 # Title of the webpage
 st.title("Alat Analisis Sentiment Media Sosial")
