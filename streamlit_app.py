@@ -2,10 +2,10 @@ import streamlit as st
 import requests
 import json
 
-st.set_page_config(page_title="Alat Analisis Sentiment Media Sosial 📊👥💬")
+st.set_page_config(page_title="Alat Analisis Sentiment Media Sosial")
 
 # Title of the webpage
-st.title("Alat Analisis Sentiment Media Sosial")
+st.title("Alat Analisis Sentiment Media Sosial 📊👥💬")
 
 # Create an empty container to hold the user input
 user_input_container = st.empty()
