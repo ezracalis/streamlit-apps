@@ -2,17 +2,17 @@ import streamlit as st
 import requests
 import json
 
-st.set_page_config(page_title="Sentiment Analysis (Bahasa Melayu)")
+st.set_page_config(page_title="Alat Analisis Sentiment Media Sosial")
 
 # Title of the webpage
-st.title("Sentiment Analysis (Bahasa Melayu)")
+st.title("Alat Analisis Sentiment Media Sosial")
 
 # Create an empty container to hold the user input
 user_input_container = st.empty()
 
 # Get user inputs
 #sentence = user_input_container.text_area(label='Input a sentence in Malay to determine its sentiment.')
-sentence = user_input_container.text_area(label='Isi ayat dalam Bahasa Melayu untuk menentukan sentimennya. 🇸🇬🇲🇾🇧🇳🇮🇩')
+sentence = user_input_container.text_area(label='Isi ayat dalam Bahasa Melayu untuk menentukan sentimen ayat tersebut. 🇸🇬🇲🇾🇧🇳🇮🇩')
 
 # Display the inputs
 user_input = {"sentences": [sentence]} 
