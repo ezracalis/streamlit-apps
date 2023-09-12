@@ -31,7 +31,7 @@ if st.button("Submit"):  # only display model predictions on UI if user clicks "
     response = requests.post(f'{api_url}{api_route}', json=user_input)
     predictions = response.json()  # return dictionary with key 'predictions' & values are a list of predictions
     
-    st.write(f"Prediction: {predictions['sentiment']}")  # prediction values were stored in 'predictions' key of dict: predictions. [0] is to give prediction output 0/1 in a "unlisted" format since we're only sending user inputs for 1 row of X at a time
+    st.write(f"Sentiment: {predictions['sentiment']}")  # prediction values were stored in 'predictions' key of dict: predictions. [0] is to give prediction output 0/1 in a "unlisted" format since we're only sending user inputs for 1 row of X at a time
    # # Extract the sentiment probability from the dictionary
    #  negative_probability = predictions["probability"][0]
    #  neutral_probability = predictions["probability"][1]
